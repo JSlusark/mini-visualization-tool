@@ -10,21 +10,34 @@ interface TriviaQuestion {
     incorrect_answers: string[];
 }
 
+/*
+TODO:
+- add local storage caching to reduce API calls and to use when offline
+- integration tests with jest to check on API response handling
+*/
 export const loadTriviaData = (amount: number) => {
     const [data, setData] = useState<TriviaQuestion[]>([]);
     const [error, setError] = useState<string | null>(null);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
 
     useEffect(() => {
-        axios
-            .get(`https://opentdb.com/api.php?amount=${amount}`)
-            .then((res) => {
-                    console.log(res);
-                    setData(res.data.results);
-            })
-            .catch((err) => {
-                setError(err.message);
-            })
+        const timer = setTimeout(() => {
+            axios
+                .get(`https://opentdb.com/api.php?amount=${amount}`)
+                .then((res) => {
+                        console.log(res);
+                        setData(res.data.results);
+                        setIsLoading(false);
+                })
+                .catch((err) => {
+                    setError(err.message);
+                });
+        }, 5000);
+
+        return () => clearTimeout(timer);
     }, []);
 
-    return { data, error };
+
+
+    return { data, isLoading, error };
 };
