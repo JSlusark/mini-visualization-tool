@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
+import type { TriviaQuestion } from "../types";
 import axios from "axios";
 
-interface TriviaQuestion {
-    type: string;
-    difficulty: string;
-    category: string;
-    question: string;
-    correct_answer: string;
-    incorrect_answers: string[];
-}
+
+// export interface TriviaQuestion {
+//     type: string;
+//     difficulty: string;
+//     category: string;
+//     question: string;
+//     correct_answer: string;
+//     incorrect_answers: string[];
+// }
 
 /*
 TODO:

@@ -2,7 +2,7 @@
     {
         "type": "multiple",
         "difficulty": "medium",
-        "category": "Entertainment: Books",
+        "category": "Entertainment 1",
         "question": "By what nickname is Jack Dawkins known in the Charles Dickens novel, &#039;Oliver Twist&#039;?",
         "correct_answer": "The Artful Dodger",
         "incorrect_answers": ["Fagin", "Bull&rsquo;s-eye", "Mr. Fang"]
@@ -10,7 +10,7 @@
     {
         "type": "multiple",
         "difficulty": "easy",
-        "category": "Entertainment: Books",
+        "category": "Entertainment 2",
         "question": "Who wrote the young adult novel &quot;The Fault in Our Stars&quot;?",
         "correct_answer": "John Green",
         "incorrect_answers": ["Stephenie Meyer", "Suzanne Collins", "Stephen Chbosky"]
@@ -18,7 +18,7 @@
     {
         "type": "multiple",
         "difficulty": "medium",
-        "category": "Entertainment: Books",
+        "category": "Entertainment 3",
         "question": "In the &quot;The Hobbit&quot;, who kills Smaug?",
         "correct_answer": "Bard",
         "incorrect_answers": ["Bilbo Baggins", "Gandalf the Grey", "Frodo"]
@@ -26,7 +26,7 @@
     {
         "type": "multiple",
         "difficulty": "hard",
-        "category": "Entertainment: Books",
+        "category": "Entertainment 3",
         "question": "Abel Magwitch is a character from which Charles Dickens novel?",
         "correct_answer": "Great Expectations",
         "incorrect_answers": ["The Pickwick Papers", "Nicholas Nickleby", "Oliver Twist"]
@@ -34,7 +34,7 @@
     {
         "type": "multiple",
         "difficulty": "medium",
-        "category": "Entertainment: Books",
+        "category": "Entertainment 1",
         "question": "In Michael Crichton&#039;s novel &quot;Jurassic Park&quot;, John Hammond meets his demise at the claws of which dinosaur?",
         "correct_answer": "Procompsognathus",
         "incorrect_answers": ["Dilophosaurus", "Tyrannosaurus Rex", "Velociraptor"]
@@ -42,7 +42,7 @@
     {
         "type": "multiple",
         "difficulty": "hard",
-        "category": "Entertainment: Books",
+        "category": "Entertainment 1",
         "question": "In which classic novel is there a character named Homer Simpson?",
         "correct_answer": "The Day of the Locust",
         "incorrect_answers": ["Catch-22", "Of Mice and Men", "A Separate Peace"]
@@ -50,7 +50,7 @@
     {
         "type": "multiple",
         "difficulty": "hard",
-        "category": "Entertainment: Books",
+        "category": "Entertainment 2",
         "question": "The novel &quot;Jane Eyre&quot; was written by what author? ",
         "correct_answer": "Charlotte Bront&euml;",
         "incorrect_answers": ["Emily Bront&euml;", "Jane Austen", "Louisa May Alcott"]
@@ -58,7 +58,7 @@
     {
         "type": "multiple",
         "difficulty": "hard",
-        "category": "Entertainment: Books",
+        "category": "Entertainment 2",
         "question": "In which classic novel by Mark Twain did a beggar and Prince of Wales switch clothes, and learn about social class inequality?",
         "correct_answer": "The Prince and the Pauper",
         "incorrect_answers": ["Hamlet", "Wealthy Boy and the Schmuck", "A Modern Twain Story"]
@@ -66,7 +66,7 @@
     {
         "type": "boolean",
         "difficulty": "easy",
-        "category": "Entertainment: Books",
+        "category": "Entertainment 5",
         "question": "Dracula is destroyed by contact with sunlight",
         "correct_answer": "False",
         "incorrect_answers": ["True"]
@@ -74,7 +74,7 @@
     {
         "type": "multiple",
         "difficulty": "easy",
-        "category": "Entertainment: Books",
+        "category": "Entertainment 4",
         "question": "Which famous book is sub-titled &#039;The Modern Prometheus&#039;?",
         "correct_answer": "Frankenstein",
         "incorrect_answers": ["Dracula", "The Strange Case of Dr. Jekyll and Mr. Hyde ", "The Legend of Sleepy Hollow"]
