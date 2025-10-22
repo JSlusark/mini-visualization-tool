@@ -1,28 +1,35 @@
 import "./App.css";
-import { loadTriviaData } from "./hooks/loadTriviaData";
-import Chart from "./components/Chart";
 import mockData from "./assets/mockData.json";
 import { useState } from "react";
 
+// import { loadTriviaData } from "./hooks/loadTriviaData";
+import { getDistribution } from "./utils/getDistribution"; // Renamed function
+import SelectCategory from "./components/SelectCategory";
+import Chart from "./components/Chart";
+
 function App() {
-    /*  const { data, isLoading, error } = loadTriviaData(50);
+    //      const { data, isLoading, error } = loadTriviaData(50);
 
-    const content = () => {
-        if (isLoading) {
-            return <p>Loading...</p>;
-        } else {
-            return error ? (
-                <p>Error: {error}</p>
-            ) : (
-                <>
-                    <p>Success: {data.length} questions loaded</p>
-                </>
-            );
-        }
-    };
- */
+    // const content = () => {
+    //     if (isLoading) {
+    //         return <p>Loading...</p>;
+    //     } else {
+    //         return error ? (
+    //             <p>Error: {error}</p>
+    //         ) : (
+    //             <>
+    //                 <p>Success: {data.length} questions loaded</p>
+    //             </>
+    //         );
+    //     }
+    // };
 
-    const [filteredView, setFilteredView] = useState<string>("questions");
+    const [distributionType, setDistributionType] = useState<string>("category");
+    let chartData = getDistribution(mockData, distributionType);
+    let categoryData = getDistribution(mockData, "category");/* momenarily added, need to cleanup logic */
+    console.log("Requested distribution type: ", distributionType);
+    console.log(chartData);
+
     return (
         <>
             <h1>Trivia visualizer</h1>
@@ -30,31 +37,24 @@ function App() {
             Toggle view by:
             <button
                 onClick={() => {
-                    setFilteredView("questions");
+                    setDistributionType("category");
                 }}>
-                questions
-            </button>{" "}
-            {/* can show this by default, if we filter by */}
+                Category
+            </button>
             <button
                 onClick={() => {
-                    setFilteredView("difficulty");
+                    setDistributionType("difficulty");
                 }}>
-                difficulty
+                Difficulty
             </button>
-            <Chart data={mockData} viewType={filteredView} />
+            <Chart data={chartData} />
             {/*
                 TODO: decide how to show filters.
                 - category selection could be a dropdown menu we can have many different options
                 - distribution type could be toggle buttons, i should also makes it clear
                 if these filters are applied at the whole data and/or by the chosen category
             */}
-            Filter by category:
-            <select name="category" id="category">
-                <option value="option">None</option>
-                <option value="option">category1</option>
-                <option value="option">category2</option>
-                <option value="option">category3</option>
-            </select>
+            <SelectCategory data={categoryData}/> {/* momentarily adding, need cleaner logic */}
         </>
     );
 }

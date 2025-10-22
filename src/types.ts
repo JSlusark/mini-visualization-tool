@@ -13,3 +13,8 @@ export interface TriviaQuestion {
     correct_answer: string;
     incorrect_answers: string[];
 }
+
+export interface DistributionItem { // Renamed from filteredQuestion
+    value: string;
+    count: number;
+}

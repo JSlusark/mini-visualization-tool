@@ -1,5 +1,5 @@
-import { setDistribution } from "../utils/setDistribution";
-import type { TriviaQuestion } from "../types";
+// import { selectedDistribution } from "../utils/selectedDistribution";
+import type { DistributionItem } from "../types"; // Renamed type
 
 import {
     LineChart,
@@ -11,22 +11,20 @@ import {
     Tooltip,
 } from "recharts";
 
-function Chart({
-    data,
-    viewType,
-}: {
-    data: TriviaQuestion[];
-    viewType: string;
-}) {
-    let filteredData = setDistribution(data, viewType);
-    console.log("Requested graph type: ", viewType);
-    console.log(filteredData);
+function Chart({ data }: { data: DistributionItem[] }) {
 
     return (
         <>
-            <LineChart data={filteredData} width={500} height={200}>
+            {/*
+            TODO:
+            - need to solve category names length overlapping on x axis
+            - some distributions may be better represented in other chart types
+            so I am considering adding options to switch between chart types
+            or allow the user to do so
+        */}
+            <LineChart data={data} width={500} height={200}>
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="value" />{" "}
+                <XAxis dataKey="value" />
                 {/* takes a value - level or category*/}
                 <YAxis dataKey="count" />
                 {/* takes a number - amount of value */}
