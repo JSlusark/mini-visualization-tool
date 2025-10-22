@@ -14,6 +14,8 @@ interface TriviaQuestion {
 TODO:
 - add local storage caching to reduce API calls and to use when offline
 - integration tests with jest to check on API response handling
+- 50 is the num of maximum questions per API call, so  could handle a case where i load more
+- loading smaller data would be useful when amount in a very high number (1000+)
 */
 export const loadTriviaData = (amount: number) => {
     const [data, setData] = useState<TriviaQuestion[]>([]);
@@ -25,9 +27,10 @@ export const loadTriviaData = (amount: number) => {
             axios
                 .get(`https://opentdb.com/api.php?amount=${amount}`)
                 .then((res) => {
-                        console.log(res);
-                        setData(res.data.results);
-                        setIsLoading(false);
+                    // console.log(res);
+                    // console.log(res.data.results);
+                    setData(res.data.results);
+                    setIsLoading(false);
                 })
                 .catch((err) => {
                     setError(err.message);
@@ -36,8 +39,6 @@ export const loadTriviaData = (amount: number) => {
 
         return () => clearTimeout(timer);
     }, []);
-
-
 
     return { data, isLoading, error };
 };
