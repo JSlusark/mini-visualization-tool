@@ -1,5 +1,6 @@
-// import { selectedDistribution } from "../utils/selectedDistribution";
-import type { DistributionItem } from "../types"; // Renamed type
+import type { TriviaQuestion } from "../types"; // Renamed type
+import { filterCategoryData, filterData } from "../utils/filterData"; // Renamed function
+
 
 import {
     LineChart,
@@ -11,18 +12,27 @@ import {
     Tooltip,
 } from "recharts";
 
-function Chart({ data }: { data: DistributionItem[] }) {
+function Chart({ data,selectedCategory, filterType }: { data: TriviaQuestion[], selectedCategory: string | null, filterType: string }) {
+
+    console.log(`Active filter:${filterType} | Active Category:${selectedCategory ? selectedCategory : 'all'}`); // it filters from questions filter
+
+    let chartData = filterData(data, filterType);
+    if( filterType === "category" && selectedCategory ){
+        chartData = chartData.filter((item) => item.value === selectedCategory);
+    }
+
+
+    console.log("Filtered data:", chartData);
 
     return (
         <>
             {/*
             TODO:
             - need to solve category names length overlapping on x axis
-            - some distributions may be better represented in other chart types
-            so I am considering adding options to switch between chart types
-            or allow the user to do so
-        */}
-            <LineChart data={data} width={500} height={200}>
+            - change to istogram/bar chart for question and difficulty distributions
+            - bug?: chart max values on axis change depending on count of single category
+            */}
+            <LineChart data={chartData} width={500} height={200}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="value" />
                 {/* takes a value - level or category*/}

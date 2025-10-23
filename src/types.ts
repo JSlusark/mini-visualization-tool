@@ -14,7 +14,7 @@ export interface TriviaQuestion {
     incorrect_answers: string[];
 }
 
-export interface DistributionItem { // Renamed from filteredQuestion
+export interface FilteredItem { // Renamed from filteredQuestion
     value: string;
     count: number;
 }

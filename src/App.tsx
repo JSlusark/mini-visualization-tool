@@ -3,7 +3,6 @@ import mockData from "./assets/mockData.json";
 import { useState } from "react";
 
 // import { loadTriviaData } from "./hooks/loadTriviaData";
-import { getDistribution } from "./utils/getDistribution"; // Renamed function
 import SelectCategory from "./components/SelectCategory";
 import Chart from "./components/Chart";
 
@@ -24,11 +23,12 @@ function App() {
     //     }
     // };
 
-    const [distributionType, setDistributionType] = useState<string>("category");
-    let chartData = getDistribution(mockData, distributionType);
-    let categoryData = getDistribution(mockData, "category");/* momenarily added, need to cleanup logic */
-    console.log("Requested distribution type: ", distributionType);
-    console.log(chartData);
+    const data = mockData; /*  to remove once feture implementations are ready */
+    const [filterType, setFilterType] = useState<string>("category");
+    const [selectedCategory, setSelectedCategory] = useState<string | null>(
+        null
+    );
+
 
     return (
         <>
@@ -37,24 +37,28 @@ function App() {
             Toggle view by:
             <button
                 onClick={() => {
-                    setDistributionType("category");
+                    setFilterType("category");
                 }}>
-                Category
+                Questions
+                {/* not found of calling category filter as category filter for me means selecting on the single category */}
             </button>
             <button
                 onClick={() => {
-                    setDistributionType("difficulty");
+                    setFilterType("difficulty");
                 }}>
                 Difficulty
             </button>
-            <Chart data={chartData} />
+            <Chart data={data} selectedCategory={selectedCategory} filterType={filterType} />
             {/*
                 TODO: decide how to show filters.
                 - category selection could be a dropdown menu we can have many different options
                 - distribution type could be toggle buttons, i should also makes it clear
                 if these filters are applied at the whole data and/or by the chosen category
             */}
-            <SelectCategory data={categoryData}/> {/* momentarily adding, need cleaner logic */}
+            <SelectCategory
+                data={data}
+                setSelectedCategory={setSelectedCategory}
+            />
         </>
     );
 }
