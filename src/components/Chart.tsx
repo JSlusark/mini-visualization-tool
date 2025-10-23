@@ -1,6 +1,5 @@
 import type { TriviaQuestion } from "../types"; // Renamed type
-import { filterCategoryData, filterData } from "../utils/filterData"; // Renamed function
-
+import { filterData } from "../utils/filterData"; // Renamed function
 
 import {
     LineChart,
@@ -12,16 +11,16 @@ import {
     Tooltip,
 } from "recharts";
 
-function Chart({ data,selectedCategory, filterType }: { data: TriviaQuestion[], selectedCategory: string | null, filterType: string }) {
-
-    console.log(`Active filter:${filterType} | Active Category:${selectedCategory ? selectedCategory : 'all'}`); // it filters from questions filter
-
-    let chartData = filterData(data, filterType);
-    if( filterType === "category" && selectedCategory ){
-        chartData = chartData.filter((item) => item.value === selectedCategory);
-    }
-
-
+function Chart({
+    data,
+    selectedCategory,
+    filterType,
+}: {
+    data: TriviaQuestion[];
+    selectedCategory: string | null;
+    filterType: string;
+}) {
+    let chartData = filterData(data, selectedCategory, filterType);
     console.log("Filtered data:", chartData);
 
     return (

@@ -1,9 +1,20 @@
 import type { TriviaQuestion } from "../types";
 
+export function filterData(
+    data: TriviaQuestion[],
+    selectedCategory: string | null,
+    filterType: string
+) {
+    let funnel = data;
+    if (selectedCategory) {
+        funnel = data.filter((q) => q.category === selectedCategory);
+    }
 
-export function filterData(data: TriviaQuestion[], filterType: string){
+    console.log(`Filtered data by: ${filterType} | Active Category:${selectedCategory ? selectedCategory : "all"}`);
+    return filterByField(funnel, filterType);
+}
 
-
+function filterByField(data: TriviaQuestion[], filterType: string) {
     const funnel: { value: string; count: number }[] = [];
 
     data.forEach((question) => {
