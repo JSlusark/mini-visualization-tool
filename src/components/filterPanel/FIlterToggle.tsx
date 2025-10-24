@@ -1,12 +1,12 @@
-import type { FilterQuestionsProps } from "../types";
-import { OPTION } from "../constants/constants";
+import type { FilterToggleProps } from "../../types";
+import { OPTION } from "../../constants/constants";
 
 const viewOptions = [
     { key: OPTION.category, label: "Category" },
     { key: OPTION.difficulty, label: "Difficulty" },
 ];
 
-const FilterQuestions: React.FC<FilterQuestionsProps> = ({
+const FilterToggle: React.FC<FilterToggleProps> = ({
     activeFilter,
     onChange,
 }) => (
@@ -42,4 +42,4 @@ const FilterQuestions: React.FC<FilterQuestionsProps> = ({
     </div>
 );
 
-export default FilterQuestions;
+export default FilterToggle;

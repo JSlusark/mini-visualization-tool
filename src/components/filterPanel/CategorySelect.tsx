@@ -1,7 +1,7 @@
 import { useState } from "react";
-import type { TriviaQuestion } from "../types";
+import type { TriviaQuestion } from "../../types";
 
-function SelectCategory({
+function CategorySelect({
     data,
     selectedCategory,
     setSelectedCategory,
@@ -56,4 +56,4 @@ function SelectCategory({
         </div>
     );
 }
-export default SelectCategory;
+export default CategorySelect;

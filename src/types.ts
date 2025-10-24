@@ -20,7 +20,7 @@ export interface FilteredItem {
 }
 
 
-export interface FilterQuestionsProps {
+export interface FilterToggleProps {
   activeFilter: string;
   onChange: (key: string) => void;
 };

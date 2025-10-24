@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { colorScheme, customiseColor } from "../utils/colorUtils";
-import type { TriviaQuestion } from "../types";
-import { filterData } from "../utils/filterData";
+import { colorScheme, customiseColor } from "../../utils/colorUtils";
+import type { TriviaQuestion } from "../../types";
+import { filterData } from "../../utils/filterData";
 import {
     BarChart,
     Bar,
