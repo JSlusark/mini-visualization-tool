@@ -1,4 +1,3 @@
-import { useState } from "react";
 import type { TriviaQuestion } from "../../types";
 
 function CategorySelect({
