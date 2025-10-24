@@ -28,7 +28,7 @@ function CategorySelect({
             </button>
                 <ul
                 tabIndex={0}
-                className="dropdown-content bg-base-100 z-10 w-full max-h-60 overflow-auto border border-base-200 shadow-md rounded-md">
+                className="dropdown-content bg-base-100 z-10 w-full max-h-60 overflow-auto border border-base-200 shadow-lg rounded-lg p-1">
                     {categories.map((item) => {
                         if (
                             selectedCategory === item ||
@@ -39,12 +39,11 @@ function CategorySelect({
                         return (
                             <li key={item} value={item}>
                                 <button
-                                    className="w-full text-left px-3 py-2 text-sm text-base-content/80 hover:bg-accent/10 hover:text-accent active:bg-accent/70 active:text-primary-content rounded transition-colors duration-150"
+                                    className="w-full text-left px-3 py-2 text-sm text-base-content/80 hover:bg-primary/10 hover:text-primary active:bg-primary active:text-primary-content rounded-md transition-colors duration-300"
                                     onClick={() => {
                                         item === "All categories"
                                             ? setSelectedCategory(null)
                                             : setSelectedCategory(item);
-                                        console.log(`ACTIVATED category filter`);
                                     }}
                                 >
                                     {item}

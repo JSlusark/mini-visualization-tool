@@ -12,12 +12,19 @@ export default function DataContainer() {
   const [activeFilter, setActiveFilter] = useState(OPTION.category);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  if (isLoading) return <LoadingSpinner label="Loading trivia data..." />;
-  if (error) return <ErrorMessage message={error} />;
-  if (!data || data.length === 0) return <EmptyState />;
+  function loadPage(){
+    if (isLoading) return <LoadingSpinner label="Loading trivia data..." />;
+    if (error) return <ErrorMessage message={error} />;
+    if (!data || data.length === 0) return <EmptyState />;
+    return  <Chart
+        data={data}
+        selectedCategory={selectedCategory}
+        activeFilter={activeFilter}
+      />
+  }
 
   return (
-    <section className="card bg-base-100 shadow-md max-w-[80%] mx-auto py-6">
+    <section className="card bg-base-100 shadow-xl border border-base-300 max-w-[90%] mx-auto py-4 rounded-2xl">
       <FilterPanel
         data={data}
         selectedCategory={selectedCategory}
@@ -25,11 +32,8 @@ export default function DataContainer() {
         activeFilter={activeFilter}
         setActiveFilter={setActiveFilter}
       />
-      <Chart
-        data={data}
-        selectedCategory={selectedCategory}
-        activeFilter={activeFilter}
-      />
+      {loadPage()}
+
     </section>
   );
 }

@@ -10,7 +10,6 @@ export function filterData(
         funnel = data.filter((q) => q.category === selectedCategory);
     }
 
-    console.log(`Filtered data by: ${activeFilter} | Active Category:${selectedCategory ? selectedCategory : "all"}`);
     return filterByField(funnel, activeFilter);
 }
 

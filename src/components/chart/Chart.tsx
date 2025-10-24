@@ -23,7 +23,7 @@ function Chart({
     activeFilter: string;
 }) {
     let chartData = filterData(data, selectedCategory, activeFilter);
-    console.log("Filtered data:", chartData);
+    // console.log("Filtered data:", chartData);
 
     // Tracks window width to decide if rotating values - might also avoid and use css later in some way
     const [rotateLabels, setRotateLabels] = useState(false);
@@ -59,7 +59,7 @@ function Chart({
         const handleResize = () => {
             const labelCount = chartData.length;
             setWindowWidth(window.innerWidth);
-            console.log("Window width:", window.innerWidth);
+            // console.log("Window width:", window.innerWidth);
             const shouldRotate = computeShouldRotate(
                 window.innerWidth,
                 labelCount
@@ -122,7 +122,7 @@ function Chart({
                     <YAxis
                         tick={{
                             fontSize: 12,
-                            fill: customiseColor(activeFilter, "idle"),
+                            fill: colorScheme.baseContent,
                         }}
                         allowDecimals={false}
                     />

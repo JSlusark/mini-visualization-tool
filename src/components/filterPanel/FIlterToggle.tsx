@@ -11,7 +11,7 @@ const FilterToggle: React.FC<FilterToggleProps> = ({
     onChange,
 }) => (
     <div className="flex flex-col items-start gap-2 px-3 py-3">
-        <span className="label-text text-sm text-base-content/70">
+        <span className="label-text text-sm text-base-content/70 font-medium">
             View questions by:
         </span>
 
@@ -19,13 +19,13 @@ const FilterToggle: React.FC<FilterToggleProps> = ({
             {viewOptions.map((option) => (
             <label
                 key={option.key}
-                className="flex items-center gap-2 join-item  py-2 cursor-pointer rounded-md transition-colors duration-150  ">
+                className={`flex items-center gap-2  py-2 cursor-pointer rounded-lg `}>
                 <input
                     type="radio"
                     name="radio-5"
                     className={`radio radio-sm ${
                         activeFilter === option.key
-                            ? "radio-base-content"
+                            ? "radio-primary duration-500"
                             : "radio-base-300"
                     }`}
                     checked={activeFilter === option.key}
@@ -33,7 +33,11 @@ const FilterToggle: React.FC<FilterToggleProps> = ({
                         onChange(option.key);
                     }}
                 />
-                <p className="text-sm font-medium text-base-content/80">
+                <p className={`text-sm font-medium transition-colors duration-500 ${
+                    activeFilter === option.key
+                        ? "text-primary"
+                        : "text-base-300"
+                }`}>
                     {option.label}
                 </p>
             </label>
