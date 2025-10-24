@@ -2,7 +2,7 @@ import "./styles/App.css";
 import mockData from "./assets/mockData.json";
 import { useState } from "react";
 
-// import { loadTriviaData } from "./hooks/loadTriviaData";
+import { loadTriviaData } from "./hooks/loadTriviaData";
 import SelectCategory from "./components/SelectCategory";
 import Chart from "./components/Chart";
 import { OPTION } from "./constants/constants";

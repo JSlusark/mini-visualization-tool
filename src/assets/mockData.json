@@ -1,82 +1,582 @@
 [
     {
-        "type": "multiple",
-        "difficulty": "medium",
-        "category": "Entertainment 1",
-        "question": "By what nickname is Jack Dawkins known in the Charles Dickens novel, &#039;Oliver Twist&#039;?",
-        "correct_answer": "The Artful Dodger",
-        "incorrect_answers": ["Fagin", "Bull&rsquo;s-eye", "Mr. Fang"]
-    },
-    {
-        "type": "multiple",
+        "type": "boolean",
         "difficulty": "easy",
-        "category": "Entertainment 2",
-        "question": "Who wrote the young adult novel &quot;The Fault in Our Stars&quot;?",
-        "correct_answer": "John Green",
-        "incorrect_answers": ["Stephenie Meyer", "Suzanne Collins", "Stephen Chbosky"]
+        "category": "Animals",
+        "question": "The freshwater amphibian, the Axolotl, can regrow it&#039;s limbs.",
+        "correct_answer": "True",
+        "incorrect_answers": [
+            "False"
+        ]
     },
     {
-        "type": "multiple",
+        "type": "boolean",
         "difficulty": "medium",
-        "category": "Entertainment 3",
-        "question": "In the &quot;The Hobbit&quot;, who kills Smaug?",
-        "correct_answer": "Bard",
-        "incorrect_answers": ["Bilbo Baggins", "Gandalf the Grey", "Frodo"]
-    },
-    {
-        "type": "multiple",
-        "difficulty": "hard",
-        "category": "Entertainment 3",
-        "question": "Abel Magwitch is a character from which Charles Dickens novel?",
-        "correct_answer": "Great Expectations",
-        "incorrect_answers": ["The Pickwick Papers", "Nicholas Nickleby", "Oliver Twist"]
-    },
-    {
-        "type": "multiple",
-        "difficulty": "medium",
-        "category": "Entertainment 1",
-        "question": "In Michael Crichton&#039;s novel &quot;Jurassic Park&quot;, John Hammond meets his demise at the claws of which dinosaur?",
-        "correct_answer": "Procompsognathus",
-        "incorrect_answers": ["Dilophosaurus", "Tyrannosaurus Rex", "Velociraptor"]
-    },
-    {
-        "type": "multiple",
-        "difficulty": "hard",
-        "category": "Entertainment 1",
-        "question": "In which classic novel is there a character named Homer Simpson?",
-        "correct_answer": "The Day of the Locust",
-        "incorrect_answers": ["Catch-22", "Of Mice and Men", "A Separate Peace"]
-    },
-    {
-        "type": "multiple",
-        "difficulty": "hard",
-        "category": "Entertainment 2",
-        "question": "The novel &quot;Jane Eyre&quot; was written by what author? ",
-        "correct_answer": "Charlotte Bront&euml;",
-        "incorrect_answers": ["Emily Bront&euml;", "Jane Austen", "Louisa May Alcott"]
-    },
-    {
-        "type": "multiple",
-        "difficulty": "hard",
-        "category": "Entertainment 2",
-        "question": "In which classic novel by Mark Twain did a beggar and Prince of Wales switch clothes, and learn about social class inequality?",
-        "correct_answer": "The Prince and the Pauper",
-        "incorrect_answers": ["Hamlet", "Wealthy Boy and the Schmuck", "A Modern Twain Story"]
+        "category": "Entertainment: Music",
+        "question": "Ashley Frangipane performs under the stage name Halsey.",
+        "correct_answer": "True",
+        "incorrect_answers": [
+            "False"
+        ]
     },
     {
         "type": "boolean",
         "difficulty": "easy",
-        "category": "Entertainment 5",
-        "question": "Dracula is destroyed by contact with sunlight",
+        "category": "Science: Gadgets",
+        "question": "The communication protocol NFC stands for Near-Field Control.",
         "correct_answer": "False",
-        "incorrect_answers": ["True"]
+        "incorrect_answers": [
+            "True"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Science &amp; Nature",
+        "question": "What does the term &quot;isolation&quot; refer to in microbiology?",
+        "correct_answer": "The separation of a strain from a natural, mixed population of living microbes",
+        "incorrect_answers": [
+            "A lack of nutrition in microenviroments",
+            "The nitrogen level in soil",
+            "Testing effects of certain microorganisms in an isolated enviroments, such as caves"
+        ]
+    },
+    {
+        "type": "boolean",
+        "difficulty": "medium",
+        "category": "Entertainment: Film",
+        "question": "Stanley Kubrick&#039;s &quot;Dr. Strangelove&quot; (1964) originally ended with a large pie fight in the war room.",
+        "correct_answer": "True",
+        "incorrect_answers": [
+            "False"
+        ]
     },
     {
         "type": "multiple",
         "difficulty": "easy",
-        "category": "Entertainment 4",
-        "question": "Which famous book is sub-titled &#039;The Modern Prometheus&#039;?",
-        "correct_answer": "Frankenstein",
-        "incorrect_answers": ["Dracula", "The Strange Case of Dr. Jekyll and Mr. Hyde ", "The Legend of Sleepy Hollow"]
+        "category": "Entertainment: Video Games",
+        "question": "In what city in the dystopia alternate future of Half-Life 2 do you first start in?",
+        "correct_answer": "City 17",
+        "incorrect_answers": [
+            "City 18",
+            "City 6",
+            "City 45"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "General Knowledge",
+        "question": "Which type of cutlery is most suited for eating soup?",
+        "correct_answer": "Spoon",
+        "incorrect_answers": [
+            "Fork",
+            "Knife",
+            "Chopsticks"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Entertainment: Video Games",
+        "question": "What is the name of the playable character in the 2018 video game Deltarune: Chapter 1?",
+        "correct_answer": "Kris",
+        "incorrect_answers": [
+            "Frisk",
+            "Chara",
+            "Gaster"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Film",
+        "question": "Who did the score to the original Blade Runner?",
+        "correct_answer": "Vangelis",
+        "incorrect_answers": [
+            "Kitaro",
+            "Yanni",
+            "Enya"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Entertainment: Music",
+        "question": "What 1970&#039;s American ballad referred to the 1959 plane crash as the &quot;the day the music died&quot;?",
+        "correct_answer": "American Pie",
+        "incorrect_answers": [
+            "Kentucky Rain",
+            "I Will Always Love You",
+            "Rock &#039;n&#039; Roll Suicide"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "General Knowledge",
+        "question": "How long did it take the motorized window washers of the original World Trade Center to clean the entire exterior of the building?",
+        "correct_answer": "1 Month",
+        "incorrect_answers": [
+            "3 Weeks",
+            "1 Week",
+            "2 Months"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Film",
+        "question": "Which one of these actors is said to be cut from the film &#039;E.T. the Extra-Terrestrial&#039;?",
+        "correct_answer": "Harrison Ford",
+        "incorrect_answers": [
+            "Michael J. Fox",
+            "Andy Kaufman",
+            "Arnold Schwarzenegger"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Film",
+        "question": "Which retired American football quarterback played himself in &#039;Ace Ventura: Pet Detective&#039; and &#039;Little Nicky&#039;?",
+        "correct_answer": "Dan Marino",
+        "incorrect_answers": [
+            "John Elway",
+            "Tom Brady",
+            "Joe Montana"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science &amp; Nature",
+        "question": "Approximately what percentage of Earth&#039;s atmosphere is Oxygen?",
+        "correct_answer": "21%",
+        "incorrect_answers": [
+            "54%",
+            "78%",
+            "7%"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Video Games",
+        "question": "The creator of the Touhou Project series is:",
+        "correct_answer": "ZUN",
+        "incorrect_answers": [
+            "SUN",
+            "RUN",
+            "PUN"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Science &amp; Nature",
+        "question": "Which of these animals belongs in class Chondrichthyes?",
+        "correct_answer": "Great white shark",
+        "incorrect_answers": [
+            "Octopus",
+            "Killer whale",
+            "Catfish"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "General Knowledge",
+        "question": "Which American manufactured submachine gun was informally known by the American soldiers that used it as &quot;Grease Gun&quot;?",
+        "correct_answer": "M3",
+        "incorrect_answers": [
+            "Colt 9mm",
+            "Thompson",
+            "MAC-10"
+        ]
+    },
+    {
+        "type": "boolean",
+        "difficulty": "medium",
+        "category": "Entertainment: Video Games",
+        "question": "POLYBIUS is a myth arcade cabinet/game",
+        "correct_answer": "True",
+        "incorrect_answers": [
+            "False"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science &amp; Nature",
+        "question": "Which of the following men does not have a chemical element named after him?",
+        "correct_answer": "Sir Isaac Newton",
+        "incorrect_answers": [
+            "Albert Einstein",
+            "Niels Bohr",
+            "Enrico Fermi"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Video Games",
+        "question": "Which ones of these Mario Kart games was made for the Gameboy Advance?",
+        "correct_answer": "Mario Kart: Super Circuit",
+        "incorrect_answers": [
+            "Mario Kart: Double Dash",
+            "Mario Kart 64",
+            "Super Mario Kart"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Animals",
+        "question": "Snakes and lizards are known to flick their tongue, this behavior is to?",
+        "correct_answer": "Capture scent particles",
+        "incorrect_answers": [
+            "Taste the sweet air",
+            "Threaten other species",
+            "Attract female mates"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Sports",
+        "question": "Which city features all of their professional sports teams&#039; jersey&#039;s with the same color scheme?",
+        "correct_answer": "Pittsburgh",
+        "incorrect_answers": [
+            "New York",
+            "Seattle",
+            "Tampa Bay"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "General Knowledge",
+        "question": "&quot;A3&quot;, &quot;B1&quot;, and &quot;Legal&quot; are typical names of sizes for what object?",
+        "correct_answer": "Paper",
+        "incorrect_answers": [
+            "Airplanes",
+            "Law books",
+            "Phone screens"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Film",
+        "question": "In the movie &ldquo;The Iron Giant,&rdquo; this character is the protagonist.",
+        "correct_answer": "Hogarth Hughes",
+        "incorrect_answers": [
+            "Kent Mansley",
+            "Dean McCoppin",
+            "Annie Hughes"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Entertainment: Music",
+        "question": "Which artist released the 2012 single &quot;Harlem Shake&quot;, which was used in numerous YouTube videos in 2013?",
+        "correct_answer": "Baauer",
+        "incorrect_answers": [
+            "RL Grime",
+            "NGHTMRE",
+            "Flosstradamus"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Mythology",
+        "question": "In Greek Mythology, who killed Achilles?",
+        "correct_answer": "Paris",
+        "incorrect_answers": [
+            "Hector",
+            "Helen",
+            "Pericles"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science: Computers",
+        "question": "When did the online streaming service &quot;Mixer&quot; launch?",
+        "correct_answer": "2016",
+        "incorrect_answers": [
+            "2013",
+            "2009",
+            "2011"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Entertainment: Film",
+        "question": "In what year was the first Indian movie submitted for an Oscar?",
+        "correct_answer": "1957",
+        "incorrect_answers": [
+            "1962",
+            "1938",
+            "1954"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Video Games",
+        "question": "Who was Tetris created by?",
+        "correct_answer": "Alexey Pajitnov",
+        "incorrect_answers": [
+            "Toru Iwatani",
+            "Allan Alcorn",
+            "William Higinbotham"
+        ]
+    },
+    {
+        "type": "boolean",
+        "difficulty": "medium",
+        "category": "Entertainment: Video Games",
+        "question": "In Monster Hunter Generations, guild style is a type of hunting style.",
+        "correct_answer": "True",
+        "incorrect_answers": [
+            "False"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Celebrities",
+        "question": "The eccentric natural philosopher Tycho Brahe kept what as a pet?",
+        "correct_answer": "Moose",
+        "incorrect_answers": [
+            "Dog",
+            "Bear",
+            "Goat"
+        ]
+    },
+    {
+        "type": "boolean",
+        "difficulty": "medium",
+        "category": "Entertainment: Film",
+        "question": "The movie &quot;The Rocky Horror Picture Show&quot; (1975) opens with giant floating lips singing the opening song",
+        "correct_answer": "True",
+        "incorrect_answers": [
+            "False"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "General Knowledge",
+        "question": "Which of the following buildings is example of a structure primarily built in the Art Deco architectural style?",
+        "correct_answer": "Niagara Mohawk Building",
+        "incorrect_answers": [
+            "Taipei 101",
+            "One Detroit Center",
+            "Westendstrasse 1"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Television",
+        "question": "What is the surname of the character Daryl in AMC&#039;s show The Walking Dead?",
+        "correct_answer": "Dixon",
+        "incorrect_answers": [
+            "Grimes",
+            "Dickinson",
+            "Dicketson"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "History",
+        "question": "Who was the only US President to be elected four times?",
+        "correct_answer": "Franklin Roosevelt",
+        "incorrect_answers": [
+            "Theodore Roosevelt",
+            "George Washington",
+            "Abraham Lincoln"
+        ]
+    },
+    {
+        "type": "boolean",
+        "difficulty": "medium",
+        "category": "Entertainment: Japanese Anime &amp; Manga",
+        "question": "In &quot;JoJo&#039;s Bizarre Adventure&quot;, Father Enrico Pucchi uses a total of 3 stands in Part 6: Stone Ocean.",
+        "correct_answer": "True",
+        "incorrect_answers": [
+            "False"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Video Games",
+        "question": "In the ARPG &quot;Path of Exile,&quot; what is the highest amount of sockets that an item can have?",
+        "correct_answer": "6",
+        "incorrect_answers": [
+            "5",
+            "4",
+            "8"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Entertainment: Video Games",
+        "question": "In World of Warcraft, What was the name of the spell that caused a plague that famously killed millions of players in 2005?",
+        "correct_answer": "Corrupted Blood",
+        "incorrect_answers": [
+            "Necrotic Plague",
+            "Unbound Infestation",
+            "Mutated Infection"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Sports",
+        "question": "With which doubles partner did John McEnroe have most success?",
+        "correct_answer": "Peter Fleming",
+        "incorrect_answers": [
+            "Mark Woodforde",
+            "Michael Stich",
+            "Mary Carillo"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "General Knowledge",
+        "question": "The American company &quot;Campbell&#039;s&quot; is most well known for making what food product?",
+        "correct_answer": "Canned soups",
+        "incorrect_answers": [
+            "Chocolate",
+            "Soft drinks",
+            "Sausages"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "General Knowledge",
+        "question": "According to the nursery rhyme, what fruit did Little Jack Horner pull out of his Christmas pie?",
+        "correct_answer": "Plum",
+        "incorrect_answers": [
+            "Apple",
+            "Peach",
+            "Pear"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Geography",
+        "question": "What is the name of the former country that was succeeded by countries such as Serbia, Croatia and Slovenia?",
+        "correct_answer": "Yugoslavia",
+        "incorrect_answers": [
+            "Czechoslovakia",
+            "Abkhazia",
+            "South Ossetia"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Comics",
+        "question": "Which Doom Patrol member was a later addition, first appearing in 1989?",
+        "correct_answer": "Crazy Jane",
+        "incorrect_answers": [
+            "Elast-Girl",
+            "Robotman",
+            "Negative Man"
+        ]
+    },
+    {
+        "type": "boolean",
+        "difficulty": "easy",
+        "category": "Entertainment: Television",
+        "question": "In Battlestar Galactica (2004), Cylons were created by man as cybernetic workers and soldiers.",
+        "correct_answer": "True",
+        "incorrect_answers": [
+            "False"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Entertainment: Video Games",
+        "question": "Who created the digital distribution platform Steam?",
+        "correct_answer": "Valve",
+        "incorrect_answers": [
+            "Pixeltail Games",
+            "Ubisoft",
+            "Electronic Arts"
+        ]
+    },
+    {
+        "type": "boolean",
+        "difficulty": "medium",
+        "category": "Entertainment: Music",
+        "question": "3 members of 2 Live Crew were arrested for playing songs from their album, As Nasty As They Wanna Be, live.",
+        "correct_answer": "True",
+        "incorrect_answers": [
+            "False"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Music",
+        "question": "Saul Hudson (Slash) of the band Guns N&#039; Roses is known for playing what type of guitar?",
+        "correct_answer": "Les Paul Standard",
+        "incorrect_answers": [
+            "Fender Stratocaster",
+            "LsL Mongrel",
+            "Gretsch Falcon"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Vehicles",
+        "question": "Which of these is NOT a car model produced by Malaysian car manufacturer Proton?",
+        "correct_answer": "Kelisa",
+        "incorrect_answers": [
+            "Saga",
+            "Perdana",
+            "Inspira"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Video Games",
+        "question": "In the &quot;Portal&quot; series, who was Cave Johnson&#039;s personal assistant?",
+        "correct_answer": "Caroline",
+        "incorrect_answers": [
+            "Heather",
+            "Melissa",
+            "Jane"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "General Knowledge",
+        "question": "What is the name given to Indian food cooked over charcoal in a clay oven?",
+        "correct_answer": "Tandoori",
+        "incorrect_answers": [
+            "Biryani",
+            "Pani puri",
+            "Tiki masala"
+        ]
     }
 ]

@@ -2,16 +2,6 @@ import { useEffect, useState } from "react";
 import type { TriviaQuestion } from "../types";
 import axios from "axios";
 
-
-// export interface TriviaQuestion {
-//     type: string;
-//     difficulty: string;
-//     category: string;
-//     question: string;
-//     correct_answer: string;
-//     incorrect_answers: string[];
-// }
-
 /*
 TODO:
 - add local storage caching to reduce API calls and to use when offline
