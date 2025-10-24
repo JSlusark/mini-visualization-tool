@@ -18,3 +18,9 @@ export interface FilteredItem {
     value: string;
     count: number;
 }
+
+
+export interface FilterQuestionsProps {
+  activeFilter: string;
+  onChange: (key: string) => void;
+};

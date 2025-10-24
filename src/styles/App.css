@@ -1,0 +1,128 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+    name: "mytheme";
+    default: true; /* makes it the default theme */
+    prefersdark: false;
+    color-scheme: "light";
+
+    /*                        BACKGROUNDS                                  */
+    /* Main background – page background, cards, app body */
+    --color-base-100: oklch(100% 0.02 275);
+    /* Secondary background – nested containers, tables, modals */
+    --color-base-200: oklch(80% 0.03 275);
+    /* Tertiary background / subtle borders – dividers, outlines */
+    --color-base-300: oklch(60% 0.03 275);
+    /* Default text on base backgrounds – body text, headings */
+    --color-base-content: oklch(24% 0.04 270);
+
+    /*                        BACKGROUNDS                                  */
+
+    /* Brand: primary – primary buttons, links, active states */
+    --color-primary: oklch(62% 0.27 330); /* pink-magenta */
+    /* Text/icon on primary – contrast color for primary bg */
+    --color-primary-content: oklch(100% 0 0);
+
+    /* Brand: secondary – secondary buttons, tabs, accents */
+    --color-secondary: oklch(58% 0.25 280); /* violet */
+    /* Text/icon on secondary – contrast color for secondary bg */
+    --color-secondary-content: oklch(73.851% 0.13962 287.613);
+
+    /* Accent/highlight – links, badges, highlights */
+    --color-accent: oklch(70% 0.25 70); /* yellow-orange accent */
+    /* Text/icon on accent – contrast color for accent bg */
+    --color-accent: oklch(77.211% 0.17258 64.119); /* yellow-orange accent */
+
+    /*                        NEUTRAL STRUCTURAL NON SEMANTIC                                  */
+    /* Neutral surfaces – navbar, footer, disabled items */
+    --color-neutral: oklch(100% 0.00011 271.152 / 0);
+    /* Text/icon on neutral bg – ensure contrast */
+    --color-neutral-content: oklch(98% 0.02 275);
+
+    /*                        SYSTEM FEEDBACK                                  */
+    /* Info state – notifications, info tooltips/cards */
+    --color-info: oklch(68% 0.18 250); /* bright blue */
+    /* Text/icon on info background */
+    --color-info-content: oklch(100% 0 0);
+
+    /* Success state – success alerts, "done" buttons */
+    --color-success: oklch(70% 0.18 160); /* green */
+    /* Text/icon on success background */
+    --color-success-content: oklch(100% 0 0);
+
+    /* Warning state – caution banners, unsaved warnings */
+    --color-warning: oklch(80% 0.2 80); /* yellow-orange */
+    /* Text/icon on warning background */
+    --color-warning-content: oklch(20% 0.03 270);
+
+    /* Error state – error alerts, destructive actions */
+    --color-error: oklch(63% 0.22 25); /* red */
+    /* Text/icon on error background */
+    --color-error-content: oklch(100% 0 0);
+
+    /*                     SHAPE AND ELEVATIONS                        */
+    /* Radius for dropdowns/menus */
+    --radius-selector: 0.25rem;
+    /* Radius for inputs/selects */
+    --radius-field: 0.25rem;
+    /* Radius for cards/containers */
+    --radius-box: 0.5rem;
+    /* Internal spacing for selectors */
+    --size-selector: 0.25rem;
+    /* Internal spacing for fields */
+    --size-field: 0.25rem;
+    /* Default border width */
+    --border: 1px;
+
+    /* Optional depth/noise (often unused in flat design) */
+    --depth: 0;
+    --noise: 0;
+}
+
+
+
+
+
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
