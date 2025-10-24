@@ -39,19 +39,19 @@ function Chart({
         "2xl": 1536,
     };
 
-    // The base ratio logic:
-    // If we have more than 5 labels at 640px, rotation triggers.
-    // For larger screens, we scale the allowed number of visible labels
-    // proportionally to the width ratio vs the base breakpoint.
+  /*   The base ratio logic:
+    If we have more than 5 labels at 640px, rotation triggers.
+    For larger screens, we scale the allowed number of visible labels
+    proportionally to the width ratio vs the base breakpoint. */
     const computeShouldRotate = (windowWidth: number, labelCount: number) => {
         const baseBreakpoint = breakpoints.sm;
         const baseLimit = 5;
-
-        // Linear scaling formula:
-        // allowedLabels = baseLimit * (windowWidth / baseBreakpoint)
+/*
+        Linear scaling formula:
+        allowedLabels = baseLimit * (windowWidth / baseBreakpoint) */
         const allowedLabels = baseLimit * (windowWidth / baseBreakpoint);
 
-        // Rotate if we have more labels than we can fit
+        // Rotates if we have more labels than we can fit
         return labelCount > allowedLabels;
     };
 
@@ -98,13 +98,13 @@ function Chart({
                             let title = value.split(":");
                             if (title[1]) {
                                 formatted =
-                                    title[0].trim().substring(0, 5) +
+                                    title[0].trim().substring(0, 3) +
                                     `: ` +
-                                    title[1]; // "Ent"
+                                    title[1]; // "Ent + rest of string"
                             }
 
-                            // Base trimming logic for everything else
-                            const limit = rotateLabels ? 17 : 10; // show more chars if rotated
+                            // Base trimming logic for rest
+                            const limit = rotateLabels ? 17 : 25; // shows more chars if not rotated as rotation is triggered most times
                             return formatted.length > limit
                                 ? formatted.slice(0, limit) + "…"
                                 : formatted;

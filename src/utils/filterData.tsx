@@ -27,5 +27,9 @@ function filterByField(data: TriviaQuestion[], activeFilter: string) {
         }
     });
 
-    return funnel;
+    const sortedFunnel = funnel.sort((a, b) =>
+        a.value.localeCompare(b.value, undefined, { sensitivity: "base" })
+    );
+
+    return sortedFunnel;
 }

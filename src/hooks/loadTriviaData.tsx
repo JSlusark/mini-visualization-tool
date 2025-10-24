@@ -17,11 +17,21 @@ export const loadTriviaData = (amount: number) => {
     useEffect(() => {
         const timer = setTimeout(() => {
             axios
-                .get(`https://opentdb.com/api.php?amount=${amount}`)
+                .get(`https://opentdb.com/api.php?amount=${amount}&encode=url3986`)
                 .then((res) => {
                     // console.log(res);
                     // console.log(res.data.results);
-                    setData(res.data.results);
+                    const decoded = res.data.results.map((q: any) => ({
+                        ...q,
+                        category: decodeURIComponent(q.category),
+                        question: decodeURIComponent(q.question),
+                        correct_answer: decodeURIComponent(q.correct_answer),
+                        incorrect_answers: q.incorrect_answers.map((a: string) =>
+                            decodeURIComponent(a)
+                        ),
+                    }));
+
+                    setData(decoded);
                     setIsLoading(false);
                 })
                 .catch((err) => {
