@@ -46,8 +46,8 @@ function App() {
             </header>
 
             {/* Main Content Section */}
-            <section className="card bg-base-100 shadow-md">
-                <div className="card-body flex flex-col items-center gap-4 md:flex-row md:items-center md:justify-between">
+            <section className="card bg-base-100 shadow-md max-w-[80%] mx-auto py-6">
+                <div className="card-body py-0 px-8 flex flex-col items-center gap-4 md:flex-row md:items-center md:justify-between">
                     <SelectCategory
                         data={data}
                         selectedCategory={selectedCategory}

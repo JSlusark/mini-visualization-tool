@@ -27,6 +27,7 @@ function Chart({
 
     // Tracks window width to decide if rotating values - might also avoid and use css later in some way
     const [rotateLabels, setRotateLabels] = useState(false);
+    const [windowWidth, setWindowWidth] = useState(0);
     const [overBar, setOverBar] = useState(false); // so that tooltip appears only when hovering on the bar instead
 
     // Tailwind breakpoints in px
@@ -57,6 +58,8 @@ function Chart({
     useEffect(() => {
         const handleResize = () => {
             const labelCount = chartData.length;
+            setWindowWidth(window.innerWidth);
+            console.log("Window width:", window.innerWidth);
             const shouldRotate = computeShouldRotate(
                 window.innerWidth,
                 labelCount
@@ -74,10 +77,15 @@ function Chart({
             <ResponsiveContainer
                 className="max-w-4xl"
                 width="100%"
-                height={400}>
+                height={450}>
                 <BarChart
                     data={chartData}
-                    margin={{ top: 20, right: 50, left: 0, bottom: 60 }}>
+                    margin={{
+                        top: 20,
+                        right: 50,
+                        left: 0,
+                        bottom: rotateLabels ? 100 : 60,
+                    }}>
                     <CartesianGrid
                         strokeDasharray="3 3"
                         stroke={colorScheme.base200}
@@ -86,19 +94,29 @@ function Chart({
                     <XAxis
                         dataKey="value"
                         tickFormatter={(value: string) => {
-                            // Base trimming logic
-                            const limit = rotateLabels ? 30 : 10; // show more chars if rotated
-                            return value.length > limit
-                                ? value.slice(0, limit) + "…"
-                                : value;
+                            let formatted = value;
+                            let title = value.split(":");
+                            if (title[1]) {
+                                formatted =
+                                    title[0].trim().substring(0, 5) +
+                                    `: ` +
+                                    title[1]; // "Ent"
+                            }
+
+                            // Base trimming logic for everything else
+                            const limit = rotateLabels ? 17 : 10; // show more chars if rotated
+                            return formatted.length > limit
+                                ? formatted.slice(0, limit) + "…"
+                                : formatted;
                         }}
                         tick={{
                             fontSize: 12,
                             fill: `${customiseColor(activeFilter, "active")}`,
                         }}
-                        interval={(rotateLabels && window.innerWidth < 640 )? 1 : 0}
+                        interval={rotateLabels && windowWidth < 500 ? 1 : 0}
                         angle={rotateLabels ? -45 : 0}
                         textAnchor={rotateLabels ? "end" : "middle"}
+                        height={10}
                     />
 
                     <YAxis

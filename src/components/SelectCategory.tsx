@@ -1,11 +1,6 @@
 import { useState } from "react";
 import type { TriviaQuestion } from "../types";
 
-/*
-    TODO:
-    - select category to filter active filter by one single category
-    - or select category to show total property distribution per category?
-*/
 function SelectCategory({
     data,
     selectedCategory,
@@ -20,7 +15,7 @@ function SelectCategory({
     categories.unshift("All categories");
 
     return (
-           <div className="dropdown dropdown-hover w-full sm:w-64 max-w-xs md:max-w-sm">
+           <div className=" dropdown dropdown-hover w-full sm:w-64 max-w-xs md:max-w-sm">
             <p className="label-text mb-1 text-left w-full text-sm text-base-content/70">
                 Category:
             </p>
@@ -28,7 +23,7 @@ function SelectCategory({
             {/* Trigger button */}
             <button
                 tabIndex={0}
-                className="btn btn-sm w-full h-10 bg-base-100 text-base-content border border-base-200 hover:border-primary/40 hover:shadow-sm transition-all duration-150 focus:outline-none text-sm">
+                className="btn btn-sm w-full h-10 bg-base-100 text-base-content border border-base-200  hover:shadow-sm transition-all duration-150 focus:outline-none text-sm">
                     {selectedCategory ? selectedCategory : "All categories"}
             </button>
                 <ul
